@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Code } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,9 +27,21 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary">
-              <Code className="inline-block mr-2" />
-              Snipmorph
+            <div className="flex items-center">
+              <svg width="40" height="40" viewBox="0 0 40 40" className="mr-3 hover:scale-105 transition-transform duration-300">
+                <defs>
+                  <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="hsl(260, 84%, 60%)" />
+                    <stop offset="100%" stopColor="hsl(187, 92%, 48%)" />
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="36" height="36" rx="8" fill="url(#logoGradient)" />
+                <path d="M12 14 L20 14 A6 6 0 0 1 20 26 L16 26" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round" />
+                <path d="M28 26 L20 26 A6 6 0 0 1 20 14 L24 14" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round" />
+                <circle cx="14" cy="20" r="2" fill="white" />
+                <circle cx="26" cy="20" r="2" fill="white" />
+              </svg>
+              <span className="text-2xl font-bold text-primary font-serif tracking-tight">Snipmorph</span>
             </div>
           </div>
           

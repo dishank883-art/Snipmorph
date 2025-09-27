@@ -29,6 +29,15 @@ export default function Portfolio() {
       description: "Modern SaaS landing page with conversion-focused design and clear value proposition.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       tags: ["SaaS", "AI", "Landing Page"]
+    },
+    {
+      id: "roaminsider",
+      title: "RoamInsider",
+      subtitle: "Travel Website for Digital Nomads",
+      description: "Custom travel platform designed specifically for digital nomads, featuring remote work-friendly destinations and resources.",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      tags: ["Travel", "Digital Nomads", "Custom Platform"],
+      externalUrl: "https://roaminsider.com"
     }
   ];
 
@@ -44,12 +53,18 @@ export default function Portfolio() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {projects.map((project) => (
             <div 
               key={project.id}
               className="portfolio-card bg-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 fade-in cursor-pointer"
-              onClick={() => setSelectedProject(project.id)}
+              onClick={() => {
+                if (project.externalUrl) {
+                  window.open(project.externalUrl, '_blank', 'noopener,noreferrer');
+                } else {
+                  setSelectedProject(project.id);
+                }
+              }}
               data-testid={`portfolio-card-${project.id}`}
             >
               <div className="relative">

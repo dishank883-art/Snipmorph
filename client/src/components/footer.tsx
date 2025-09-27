@@ -1,4 +1,3 @@
-import { Code } from "lucide-react";
 import { SiLinkedin, SiX, SiInstagram, SiDribbble } from "react-icons/si";
 
 export default function Footer() {
@@ -28,9 +27,21 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <div className="text-2xl font-bold text-primary mb-4 flex items-center">
-              <Code className="mr-2" />
-              Snipmorph
+            <div className="flex items-center mb-4">
+              <svg width="32" height="32" viewBox="0 0 40 40" className="mr-3">
+                <defs>
+                  <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="hsl(260, 84%, 60%)" />
+                    <stop offset="100%" stopColor="hsl(187, 92%, 48%)" />
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="36" height="36" rx="8" fill="url(#footerLogoGradient)" />
+                <path d="M12 14 L20 14 A6 6 0 0 1 20 26 L16 26" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round" />
+                <path d="M28 26 L20 26 A6 6 0 0 1 20 14 L24 14" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round" />
+                <circle cx="14" cy="20" r="2" fill="white" />
+                <circle cx="26" cy="20" r="2" fill="white" />
+              </svg>
+              <span className="text-2xl font-bold text-primary font-serif">Snipmorph</span>
             </div>
             <p className="text-muted-foreground mb-4">
               Transforming ideas into modern websites for businesses worldwide.
