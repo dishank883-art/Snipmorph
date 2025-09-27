@@ -24,7 +24,7 @@ export default function UrbanWearImpact() {
       <section className="py-16 bg-gradient-to-b from-green-50 to-white dark:from-green-950/20 dark:to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Together, We're <span className="text-green-600">Reforesting</span> the Planet
+            <span className="text-green-600"> Together, We're Reforesting the Planet </span>
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Every purchase plants trees. Every tree fights climate change. Every customer becomes part of our mission to create a more sustainable world.
@@ -116,7 +116,7 @@ export default function UrbanWearImpact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-card rounded-xl overflow-hidden shadow-lg" data-testid="project-madagascar">
               <img
-                src="https://images.unsplash.com/photo-1569163139394-de44ede02e84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+                src="https://cdn.pixabay.com/photo/2019/11/04/14/37/madagascar-4601292_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
                 alt="Madagascar Reforestation"
                 className="w-full h-48 object-cover"
               />
