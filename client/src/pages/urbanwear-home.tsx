@@ -277,33 +277,7 @@ export default function UrbanWearHome() {
             </div>
           </div>
 
-          {/* Hero Product Showcase */}
-          {!newArrivalsLoading && newArrivals.length >= 3 && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {newArrivals.slice(0, 3).map((product) => (
-                <div
-                  key={product.id}
-                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
-                  data-testid={`card-hero-product-${product.id}`}
-                >
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="p-6">
-                    <div className="flex items-center mb-2">
-                      <Leaf className="w-4 h-4 text-green-600 mr-2" />
-                      <span className="text-sm text-green-600 font-medium">plants 10 trees</span>
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                    <p className="text-gray-600 text-sm mb-3">{product.material}</p>
-                    <div className="text-2xl font-bold">{formatPrice(product.price)}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+          
 
           {/* Impact Counter */}
           <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
