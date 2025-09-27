@@ -1105,6 +1105,92 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="section py-20 bg-white" style="padding-top: 140px;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-6">About UrbanWear</h2>
+                <p class="text-2xl text-gray-700 max-w-4xl mx-auto">Founded on the belief that fashion can be a force for good, we create comfortable clothing that restores our planet.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Our Story</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        UrbanWear started with a simple question: Why can't the clothes we love also love the planet back? 
+                        In 2019, we set out to prove that comfort and sustainability aren't mutually exclusive.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Every item we create plants 5 trees, uses sustainable materials, and supports ethical manufacturing. 
+                        We've planted over 2.8 million trees and counting, while creating the softest, most comfortable clothing you've ever worn.
+                    </p>
+                    
+                    <!-- Team Values -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4">
+                            <i class="fas fa-seedling text-3xl eco-green mb-2"></i>
+                            <h4 class="font-semibold mb-1">Planet First</h4>
+                            <p class="text-sm text-gray-600">Every decision prioritizes environmental impact</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <i class="fas fa-handshake text-3xl eco-green mb-2"></i>
+                            <h4 class="font-semibold mb-1">Ethical Always</h4>
+                            <p class="text-sm text-gray-600">Fair wages and safe working conditions</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <i class="fas fa-heart text-3xl eco-green mb-2"></i>
+                            <h4 class="font-semibold mb-1">Comfort Obsessed</h4>
+                            <p class="text-sm text-gray-600">Ultra-soft materials you'll never want to take off</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <i class="fas fa-recycle text-3xl eco-green mb-2"></i>
+                            <h4 class="font-semibold mb-1">Circular Design</h4>
+                            <p class="text-sm text-gray-600">Made to last, designed to be recycled</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" alt="Sustainable fashion team" class="w-full rounded-friendly shadow-2xl mb-8" />
+                    
+                    <!-- Impact Stats -->
+                    <div class="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-friendly text-center">
+                        <h4 class="font-semibold eco-green mb-4">Our Impact So Far</h4>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div>
+                                <div class="text-2xl font-bold eco-green tree-counter">2,847,392</div>
+                                <div class="text-xs text-gray-600">Trees Planted</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold eco-green">95%</div>
+                                <div class="text-xs text-gray-600">Sustainable Materials</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold eco-green">Carbon</div>
+                                <div class="text-xs text-gray-600">Neutral Shipping</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mission Statement -->
+            <div class="bg-gray-900 text-white p-16 rounded-friendly text-center">
+                <h3 class="text-3xl font-bold mb-6">Our Mission</h3>
+                <p class="text-xl leading-relaxed max-w-4xl mx-auto">
+                    "To create the world's most comfortable clothing while restoring our planet's forests, 
+                    one tree at a time. We believe that what you wear should make you feel good and do good."
+                </p>
+                <div class="flex justify-center mt-8">
+                    <div class="flex items-center space-x-6">
+                        <button onclick="showSection('shop-women')" class="sustainability-badge text-white px-8 py-3 rounded-friendly font-semibold hover:scale-105 transition-all">Shop Women's</button>
+                        <button onclick="showSection('shop-men')" class="bg-white text-gray-900 px-8 py-3 rounded-friendly font-semibold hover:scale-105 transition-all">Shop Men's</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Featured Products -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1284,7 +1370,7 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
             document.getElementById('product-price').textContent = product.price;
             document.getElementById('product-description').textContent = product.description;
             document.getElementById('product-image').src = product.image;
-            showSection('product');
+            showSection('product-detail');
         }
     }
     
