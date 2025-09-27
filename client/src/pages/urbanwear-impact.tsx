@@ -24,7 +24,7 @@ export default function UrbanWearImpact() {
       <section className="py-16 bg-gradient-to-b from-green-50 to-white dark:from-green-950/20 dark:to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Together, We're <span className="text-green-600">Reforesting</span> the Planet
+            <span className="text-green-600"> Together, We're Reforesting the Planet </span>
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Every purchase plants trees. Every tree fights climate change. Every customer becomes part of our mission to create a more sustainable world.
