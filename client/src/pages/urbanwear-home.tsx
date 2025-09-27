@@ -92,17 +92,17 @@ export default function UrbanWearHome() {
                   <NavigationMenuContent>
                     <div className="w-56 p-4 space-y-2">
                       <NavigationMenuLink asChild>
-                        <Link href="/urbanwear/men?category=hoodies" className="block py-2 text-gray-700 hover:text-green-600 transition-colors" data-testid="link-men-hoodies">
+                        <Link href="/urbanwear/men?category=hoodies" className="block py-2 text-white-700 hover:text-green-600 transition-colors" data-testid="link-men-hoodies">
                           Hoodies & Sweatshirts
                         </Link>
                       </NavigationMenuLink>
                       <NavigationMenuLink asChild>
-                        <Link href="/urbanwear/men?category=tees" className="block py-2 text-gray-700 hover:text-green-600 transition-colors" data-testid="link-men-tees">
+                        <Link href="/urbanwear/men?category=tees" className="block py-2 text-white-700 hover:text-green-600 transition-colors" data-testid="link-men-tees">
                           T-Shirts
                         </Link>
                       </NavigationMenuLink>
                       <NavigationMenuLink asChild>
-                        <Link href="/urbanwear/men?category=pants" className="block py-2 text-gray-700 hover:text-green-600 transition-colors" data-testid="link-men-pants">
+                        <Link href="/urbanwear/men?category=pants" className="block py-2 text-white-700 hover:text-green-600 transition-colors" data-testid="link-men-pants">
                           Pants & Joggers
                         </Link>
                       </NavigationMenuLink>
