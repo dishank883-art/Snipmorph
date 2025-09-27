@@ -1,0 +1,35 @@
+You are a professional web designer and developer. Create a fully responsive, premium, international agency website called Snipmorph with clean HTML, CSS, and JavaScript that can be deployed anywhere. The site must showcase Snipmorph’s design and development capabilities.
+
+Website Overview:
+Hero section: Eye-catching, modern design that immediately demonstrates premium web design skills. Include tagline: “Transforming Ideas into Modern Websites” and clear CTAs: Get a Free Quote and Contact Us.
+Pages: Home, Services, Portfolio, About, Contact
+Style: Minimal, premium, modern, international agency look inspired by Netguru.com, Matebiz.com, F-5Studio.com, UNCW3B.com, combined with high-end sample website references from Awwwards business, luxury e-commerce, and SaaS landing pages.
+Logo: Highly premium and professional.
+
+Services Section:
+Highlight that Snipmorph can create highly customized websites.
+Use marketing-friendly text appealing to international clients.
+
+Portfolio Section:
+Embed 3 fully interactive sample websites directly inside the portfolio:
+BrightPath Consulting (Business Website) – corporate, clean, professional, multi-page: Home, About, Services, Blog, Contact
+UrbanWear Co. (E-commerce Store) – sleek luxury e-commerce design: Home, Shop, Product, Cart, Checkout
+Taskly AI (SaaS Landing Page) – bright, modern, single-page layout: Hero → Features → Pricing → Testimonials → CTA
+Each sample should be interactive and demonstrate premium UI/UX design.
+
+Testimonials Section:
+Include 3–4 realistic-looking placeholder testimonials from satisfied clients.
+
+Design Requirements:
+Clean, modern, responsive layout for desktop and mobile
+Professional typography, spacing, and layout
+Luxury and premium color palette appropriate for international clients
+Use placeholder images from Unsplash/Pexels
+Clear CTAs (Get a Free Quote / Contact Us) visible throughout the site
+Include interactive elements and smooth transitions inspired by the reference sites
+
+Output Requirements:
+Provide ready-to-deploy HTML, CSS, and JS code for the entire Snipmorph site
+Embedded interactive sample websites in the portfolio section
+Fully functional navigation, forms, and placeholder content
+Optimized for international clients and high-end projects
