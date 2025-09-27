@@ -486,7 +486,7 @@ export default function UrbanWearHome() {
             </div>
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1569163139394-de4e4f43e4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=600"
+                src="https://cdn.pixabay.com/photo/2021/10/28/14/32/jeans-6749852_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=600"
                 alt="Sustainable materials"
                 className="w-full h-full object-cover"
               />
