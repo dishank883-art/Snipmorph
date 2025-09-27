@@ -334,68 +334,7 @@ export default function UrbanWearHome() {
         </div>
       </section>
 
-      {/* New Arrivals Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">New Arrivals</h2>
-            <div className="flex justify-center space-x-8 mb-12">
-              <button className="text-green-600 border-b-2 border-green-600 pb-2 font-medium">WOMEN'S</button>
-              <button className="text-gray-500 hover:text-gray-700 pb-2 font-medium">MEN'S</button>
-              <button className="text-gray-500 hover:text-gray-700 pb-2 font-medium">ACCESSORIES</button>
-            </div>
-          </div>
-
-          {newArrivalsLoading ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[...Array(8)].map((_, i) => (
-                <div key={i} className="animate-pulse">
-                  <div className="bg-gray-200 h-80 rounded-2xl mb-4"></div>
-                  <div className="bg-gray-200 h-4 rounded mb-2"></div>
-                  <div className="bg-gray-200 h-4 rounded mb-2 w-3/4"></div>
-                  <div className="bg-gray-200 h-6 rounded w-1/2"></div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {newArrivals.map((product) => (
-                <div
-                  key={product.id}
-                  className="group cursor-pointer"
-                  data-testid={`card-new-arrival-${product.id}`}
-                >
-                  <div className="relative bg-gray-50 rounded-2xl overflow-hidden mb-4 group-hover:shadow-xl transition-all duration-300">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-medium">
-                      plants 10 trees
-                    </div>
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <button className="bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-colors">
-                        <Heart className="w-4 h-4 text-gray-700" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="flex items-center mb-2">
-                    <Leaf className="w-3 h-3 text-green-600 mr-2" />
-                    <span className="text-xs text-green-600 font-medium uppercase tracking-wide">
-                      {product.sustainableFeature}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold mb-1 group-hover:text-green-600 transition-colors">
-                    {product.name}
-                  </h3>
-                  <div className="text-lg font-bold text-gray-900">{formatPrice(product.price)}</div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+     
 
       {/* Most Popular Categories */}
       <section className="py-20 bg-gray-50">
@@ -407,12 +346,12 @@ export default function UrbanWearHome() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
               { name: "Women's Hoodies & Sweatshirts", href: "/urbanwear/women/hoodies", image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
-              { name: "Men's Hoodies", href: "/urbanwear/men/hoodies", image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
+              { name: "Men's Hoodies", href: "/urbanwear/men/hoodies", image: "https://cdn.pixabay.com/photo/2021/09/13/07/08/man-6620481_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
               { name: "Women's Joggers & Pants", href: "/urbanwear/women/pants", image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
-              { name: "Men's Sweatpants & Joggers", href: "/urbanwear/men/pants", image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
+              { name: "Men's Sweatpants & Joggers", href: "/urbanwear/men/pants", image: "https://cdn.pixabay.com/photo/2014/12/25/20/52/runner-580055_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
               { name: "Women's Dresses", href: "/urbanwear/women/dresses", image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
-              { name: "Men's T-Shirts", href: "/urbanwear/men/tees", image: "https://images.unsplash.com/photo-1583743814966-8936f37f1c78?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
-              { name: "Women's T-Shirts", href: "/urbanwear/women/tees", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
+              { name: "Men's T-Shirts", href: "/urbanwear/men/tees", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
+              { name: "Women's T-Shirts", href: "/urbanwear/women/tees", image: "https://cdn.pixabay.com/photo/2020/04/09/14/42/girls-5021801_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
               { name: "Accessories", href: "/urbanwear/accessories", image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" }
             ].map((category, index) => (
               <Link key={index} href={category.href}>
