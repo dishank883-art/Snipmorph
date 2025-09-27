@@ -58,7 +58,7 @@ export default function UrbanWearHome() {
             <NavigationMenu className="hidden md:flex">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger data-testid="nav-women" className="text-gray-700 hover:text-gray-900 font-medium">
+                  <NavigationMenuTrigger data-testid="nav-women" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm transition-colors hover:bg-accent focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-accent-foreground data-[state=open]:bg-accent/50 data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent group hover:text-gray-900 font-medium text-[#fcfcfc]">
                     Women's
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -95,7 +95,7 @@ export default function UrbanWearHome() {
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger data-testid="nav-men" className="text-gray-700 hover:text-gray-900 font-medium">
+                  <NavigationMenuTrigger data-testid="nav-men" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm transition-colors hover:bg-accent focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-accent-foreground data-[state=open]:bg-accent/50 data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent group hover:text-gray-900 font-medium text-[#f0f1f2]">
                     Men's
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
