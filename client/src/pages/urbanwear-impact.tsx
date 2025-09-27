@@ -116,7 +116,7 @@ export default function UrbanWearImpact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-card rounded-xl overflow-hidden shadow-lg" data-testid="project-madagascar">
               <img
-                src="https://images.unsplash.com/photo-1569163139394-de44ede02e84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+                src="https://cdn.pixabay.com/photo/2019/11/04/14/37/madagascar-4601292_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
                 alt="Madagascar Reforestation"
                 className="w-full h-48 object-cover"
               />
