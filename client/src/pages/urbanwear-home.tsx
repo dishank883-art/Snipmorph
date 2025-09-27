@@ -47,7 +47,7 @@ export default function UrbanWearHome() {
 
             {/* Desktop Navigation */}
             <NavigationMenu className="hidden md:flex">
-              <NavigationMenuList>
+              <NavigationMenuList className="gap-x-6">
                 <NavigationMenuItem>
                   <NavigationMenuTrigger data-testid="nav-women" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm transition-colors hover:bg-accent focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-accent-foreground data-[state=open]:bg-accent/50 data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent group hover:text-gray-900 font-medium text-[#fcfcfc]">
                     Women's
