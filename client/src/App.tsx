@@ -5,8 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import UrbanWearHome from "@/pages/urbanwear-home";
-import UrbanWearWomen from "@/pages/urbanwear-women";
-import UrbanWearMen from "@/pages/urbanwear-men";
+import UrbanWearProducts from "@/pages/urbanwear-products";
 import UrbanWearImpact from "@/pages/urbanwear-impact";
 import UrbanWearAbout from "@/pages/urbanwear-about";
 import NotFound from "@/pages/not-found";
@@ -16,8 +15,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/urbanwear" component={UrbanWearHome} />
-      <Route path="/urbanwear/women" component={UrbanWearWomen} />
-      <Route path="/urbanwear/men" component={UrbanWearMen} />
+      <Route path="/urbanwear/products" component={UrbanWearProducts} />
       <Route path="/urbanwear/impact" component={UrbanWearImpact} />
       <Route path="/urbanwear/about" component={UrbanWearAbout} />
       <Route component={NotFound} />
