@@ -55,22 +55,22 @@ export default function UrbanWearHome() {
                   <NavigationMenuContent>
                     <div className="w-56 p-4 space-y-2">
                       <NavigationMenuLink asChild>
-                        <Link href="/urbanwear/women?category=hoodies" className="block py-2 text-gray-700 hover:text-white-600 transition-colors" data-testid="link-women-hoodies">
+                        <Link href="/urbanwear/women?category=hoodies" className="block py-2 text-white-700 hover:text-green-700 transition-colors" data-testid="link-women-hoodies">
                           Hoodies & Sweatshirts
                         </Link>
                       </NavigationMenuLink>
                       <NavigationMenuLink asChild>
-                        <Link href="/urbanwear/women?category=tees" className="block py-2 text-gray-700 hover:text-white-600 transition-colors" data-testid="link-women-tees">
+                        <Link href="/urbanwear/women?category=tees" className="block py-2 text-white-700 hover:text-green-700 transition-colors" data-testid="link-women-tees">
                           T-Shirts & Tops
                         </Link>
                       </NavigationMenuLink>
                       <NavigationMenuLink asChild>
-                        <Link href="/urbanwear/women?category=pants" className="block py-2 text-white-600 hover:text-white-600 transition-colors" data-testid="link-women-pants">
+                        <Link href="/urbanwear/women?category=pants" className="block py-2 text-white-600 hover:text-green-700 transition-colors" data-testid="link-women-pants">
                           Pants & Joggers
                         </Link>
                       </NavigationMenuLink>
                       <NavigationMenuLink asChild>
-                        <Link href="/urbanwear/women?category=dresses" className="block py-2 text-green-600 hover:text-white-600 transition-colors" data-testid="link-women-dresses">
+                        <Link href="/urbanwear/women?category=dresses" className="block py-2 text-white-600 hover:text-green-700 transition-colors" data-testid="link-women-dresses">
                           Dresses
                         </Link>
                       </NavigationMenuLink>
