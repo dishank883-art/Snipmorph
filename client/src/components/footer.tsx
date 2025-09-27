@@ -104,9 +104,9 @@ export default function Footer() {
           <div>
             <h4 className="text-foreground font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-muted-foreground">hello@snipmorph.com</li>
-              <li className="text-muted-foreground">+1 (555) 123-4567</li>
-              <li className="text-muted-foreground">San Francisco, CA</li>
+              <li className="text-muted-foreground">snipmorph@gmail.com</li>
+              <li className="text-muted-foreground">+91-9719873804</li>
+              <li className="text-muted-foreground">Mon-Fri: 9AM-6PM IST</li>
             </ul>
           </div>
         </div>

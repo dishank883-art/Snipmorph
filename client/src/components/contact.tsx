@@ -64,22 +64,17 @@ export default function Contact() {
     {
       icon: <Mail className="text-xl" />,
       title: "Email Us",
-      subtitle: "hello@snipmorph.com"
+      subtitle: "snipmorph@gmail.com"
     },
     {
       icon: <Phone className="text-xl" />,
       title: "Call Us",
-      subtitle: "+1 (555) 123-4567"
-    },
-    {
-      icon: <MapPin className="text-xl" />,
-      title: "Visit Us",
-      subtitle: "San Francisco, CA"
+      subtitle: "+91-9719873804"
     },
     {
       icon: <Clock className="text-xl" />,
       title: "Business Hours",
-      subtitle: "Mon-Fri: 9AM-6PM PST"
+      subtitle: "Mon-Fri: 9AM-6PM IST"
     }
   ];
 

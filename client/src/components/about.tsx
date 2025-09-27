@@ -3,19 +3,19 @@ import { Globe, Award, Users, Clock } from "lucide-react";
 export default function About() {
   const stats = [
     {
-      icon: <Globe className="text-xl" />,
-      title: "Global Reach",
-      subtitle: "50+ Countries Served"
+      icon: <Users className="text-xl" />,
+      title: "Dedicated Team",
+      subtitle: "Skilled Specialists"
     },
     {
       icon: <Award className="text-xl" />,
-      title: "Award Winning",
-      subtitle: "Industry Recognition"
+      title: "Quality Focus",
+      subtitle: "Premium Standards"
     },
     {
-      icon: <Users className="text-xl" />,
-      title: "Expert Team",
-      subtitle: "15+ Specialists"
+      icon: <Globe className="text-xl" />,
+      title: "Growing Reach",
+      subtitle: "International Clients"
     },
     {
       icon: <Clock className="text-xl" />,
@@ -33,7 +33,7 @@ export default function About() {
               About <span className="text-primary">Snipmorph</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              We are a premium international web design agency specializing in creating exceptional digital experiences for businesses worldwide. With a passion for innovation and a commitment to excellence, we transform ideas into powerful web solutions.
+              We are a fresh web design agency with a commitment to excellence and innovation. Though we're just getting started with 2-3 clients so far, we've already delivered exceptional results for each of them. We focus on creating premium digital experiences that help businesses establish a strong online presence and achieve their goals.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {stats.map((stat, index) => (
