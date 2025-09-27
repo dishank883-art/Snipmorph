@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { ShoppingBag, Heart, Search, Leaf, Recycle, Trees, Menu, X } from "lucide-react";
+import { ShoppingBag, Heart, Search, ChevronDown, Leaf, Recycle, Trees, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import type { Product } from "@shared/schema";
 
 function formatPrice(priceInCents: number) {
@@ -16,6 +17,8 @@ export default function UrbanWearHome() {
   const [treesPlanted] = useState(2847392);
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [womenMenuOpen, setWomenMenuOpen] = useState(false);
+  const [menMenuOpen, setMenMenuOpen] = useState(false);
 
   // Fetch new arrivals
   const { data: newArrivals = [], isLoading: newArrivalsLoading } = useQuery<Product[]>({
@@ -53,13 +56,74 @@ export default function UrbanWearHome() {
 
             {/* Desktop Navigation */}
             <NavigationMenu className="hidden md:flex">
-              <NavigationMenuList className="gap-x-6">
+              <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/urbanwear/women" className="text-gray-700 hover:text-gray-900 font-medium" data-testid="nav-products">
-                      Our Products
-                    </Link>
-                  </NavigationMenuLink>
+                  <NavigationMenuTrigger data-testid="nav-women" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm transition-colors hover:bg-accent focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-accent-foreground data-[state=open]:bg-accent/50 data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent group hover:text-gray-900 font-medium text-[#fcfcfc]">
+                    Women's
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-56 p-4 space-y-2">
+                      <NavigationMenuLink asChild>
+                        <Link href="/urbanwear/women?category=hoodies" className="block py-2 text-gray-700 hover:text-green-600 transition-colors" data-testid="link-women-hoodies">
+                          Hoodies & Sweatshirts
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/urbanwear/women?category=tees" className="block py-2 text-gray-700 hover:text-green-600 transition-colors" data-testid="link-women-tees">
+                          T-Shirts & Tops
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/urbanwear/women?category=pants" className="block py-2 text-gray-700 hover:text-green-600 transition-colors" data-testid="link-women-pants">
+                          Pants & Joggers
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/urbanwear/women?category=dresses" className="block py-2 text-gray-700 hover:text-green-600 transition-colors" data-testid="link-women-dresses">
+                          Dresses
+                        </Link>
+                      </NavigationMenuLink>
+                      <div className="border-t pt-2 mt-2">
+                        <NavigationMenuLink asChild>
+                          <Link href="/urbanwear/women" className="block py-2 text-green-600 font-medium hover:text-green-700 transition-colors" data-testid="link-women-all">
+                            View All Women's
+                          </Link>
+                        </NavigationMenuLink>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger data-testid="nav-men" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm transition-colors hover:bg-accent focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-accent-foreground data-[state=open]:bg-accent/50 data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent group hover:text-gray-900 font-medium text-[#f0f1f2]">
+                    Men's
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-56 p-4 space-y-2">
+                      <NavigationMenuLink asChild>
+                        <Link href="/urbanwear/men?category=hoodies" className="block py-2 text-gray-700 hover:text-green-600 transition-colors" data-testid="link-men-hoodies">
+                          Hoodies & Sweatshirts
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/urbanwear/men?category=tees" className="block py-2 text-gray-700 hover:text-green-600 transition-colors" data-testid="link-men-tees">
+                          T-Shirts
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="/urbanwear/men?category=pants" className="block py-2 text-gray-700 hover:text-green-600 transition-colors" data-testid="link-men-pants">
+                          Pants & Joggers
+                        </Link>
+                      </NavigationMenuLink>
+                      <div className="border-t pt-2 mt-2">
+                        <NavigationMenuLink asChild>
+                          <Link href="/urbanwear/men" className="block py-2 text-green-600 font-medium hover:text-green-700 transition-colors" data-testid="link-men-all">
+                            View All Men's
+                          </Link>
+                        </NavigationMenuLink>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
@@ -116,9 +180,50 @@ export default function UrbanWearHome() {
                   </div>
                   
                   <div className="space-y-4">
-                    <Link href="/urbanwear/women" className="block py-3 text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-products">
-                      Our Products
-                    </Link>
+                    <Collapsible open={womenMenuOpen} onOpenChange={setWomenMenuOpen}>
+                      <CollapsibleTrigger className="flex items-center justify-between w-full py-2 text-left font-medium text-gray-900" data-testid="mobile-women">
+                        Women's
+                        <ChevronDown className={`w-4 h-4 transition-transform ${womenMenuOpen ? 'rotate-180' : ''}`} />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="space-y-2 pl-4">
+                        <Link href="/urbanwear/women?category=hoodies" className="block py-2 text-gray-700 hover:text-green-600" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-women-hoodies">
+                          Hoodies & Sweatshirts
+                        </Link>
+                        <Link href="/urbanwear/women?category=tees" className="block py-2 text-gray-700 hover:text-green-600" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-women-tees">
+                          T-Shirts & Tops
+                        </Link>
+                        <Link href="/urbanwear/women?category=pants" className="block py-2 text-gray-700 hover:text-green-600" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-women-pants">
+                          Pants & Joggers
+                        </Link>
+                        <Link href="/urbanwear/women?category=dresses" className="block py-2 text-gray-700 hover:text-green-600" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-women-dresses">
+                          Dresses
+                        </Link>
+                        <Link href="/urbanwear/women" className="block py-2 text-green-600 font-medium" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-women-all">
+                          View All Women's
+                        </Link>
+                      </CollapsibleContent>
+                    </Collapsible>
+                    
+                    <Collapsible open={menMenuOpen} onOpenChange={setMenMenuOpen}>
+                      <CollapsibleTrigger className="flex items-center justify-between w-full py-2 text-left font-medium text-gray-900" data-testid="mobile-men">
+                        Men's
+                        <ChevronDown className={`w-4 h-4 transition-transform ${menMenuOpen ? 'rotate-180' : ''}`} />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="space-y-2 pl-4">
+                        <Link href="/urbanwear/men?category=hoodies" className="block py-2 text-gray-700 hover:text-green-600" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-men-hoodies">
+                          Hoodies & Sweatshirts
+                        </Link>
+                        <Link href="/urbanwear/men?category=tees" className="block py-2 text-gray-700 hover:text-green-600" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-men-tees">
+                          T-Shirts
+                        </Link>
+                        <Link href="/urbanwear/men?category=pants" className="block py-2 text-gray-700 hover:text-green-600" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-men-pants">
+                          Pants & Joggers
+                        </Link>
+                        <Link href="/urbanwear/men" className="block py-2 text-green-600 font-medium" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-men-all">
+                          View All Men's
+                        </Link>
+                      </CollapsibleContent>
+                    </Collapsible>
                     
                     <Link href="/urbanwear/impact" className="block py-3 text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-impact">
                       Our Impact
@@ -167,10 +272,15 @@ export default function UrbanWearHome() {
             <p className="text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
               Every piece plants trees, captures carbon, and creates positive impact. Because feeling good should do good too.
             </p>
-            <div className="flex justify-center mb-12">
+            <div className="flex justify-center gap-6 mb-12">
               <Link href="/urbanwear/women">
-                <Button className="bg-green-600 hover:bg-green-700 text-white px-10 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105" data-testid="button-shop-products">
-                  OUR PRODUCTS
+                <Button className="bg-green-600 hover:bg-green-700 text-white px-10 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105" data-testid="button-shop-womens">
+                  SHOP WOMEN'S
+                </Button>
+              </Link>
+              <Link href="/urbanwear/men">
+                <Button variant="secondary" className="bg-gray-900 hover:bg-gray-800 text-white px-10 py-4 text-lg font-semibold transition-all duration-300" data-testid="button-shop-mens">
+                  SHOP MEN'S
                 </Button>
               </Link>
             </div>
@@ -230,9 +340,9 @@ export default function UrbanWearHome() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">New Arrivals</h2>
             <div className="flex justify-center space-x-8 mb-12">
-              <button className="text-green-600 border-b-2 border-green-600 pb-2 font-medium">ALL PRODUCTS</button>
-              <button className="text-gray-500 hover:text-gray-700 pb-2 font-medium">SUSTAINABILITY</button>
-              <button className="text-gray-500 hover:text-gray-700 pb-2 font-medium">BESTSELLERS</button>
+              <button className="text-green-600 border-b-2 border-green-600 pb-2 font-medium">WOMEN'S</button>
+              <button className="text-gray-500 hover:text-gray-700 pb-2 font-medium">MEN'S</button>
+              <button className="text-gray-500 hover:text-gray-700 pb-2 font-medium">ACCESSORIES</button>
             </div>
           </div>
 
@@ -297,12 +407,12 @@ export default function UrbanWearHome() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
               { name: "Women's Hoodies & Sweatshirts", href: "/urbanwear/women/hoodies", image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
-              { name: "Men's Hoodies", href: "/urbanwear/men/hoodies", image: "https://cdn.pixabay.com/photo/2021/09/13/07/08/man-6620481_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
+              { name: "Men's Hoodies", href: "/urbanwear/men/hoodies", image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
               { name: "Women's Joggers & Pants", href: "/urbanwear/women/pants", image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
-              { name: "Men's Sweatpants & Joggers", href: "/urbanwear/men/pants", image: "https://cdn.pixabay.com/photo/2014/12/25/20/52/runner-580055_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
+              { name: "Men's Sweatpants & Joggers", href: "/urbanwear/men/pants", image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
               { name: "Women's Dresses", href: "/urbanwear/women/dresses", image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
-              { name: "Men's T-Shirts", href: "/urbanwear/men/tees", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
-              { name: "Women's T-Shirts", href: "/urbanwear/women/tees", image: "https://cdn.pixabay.com/photo/2020/04/09/14/42/girls-5021801_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
+              { name: "Men's T-Shirts", href: "/urbanwear/men/tees", image: "https://images.unsplash.com/photo-1583743814966-8936f37f1c78?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
+              { name: "Women's T-Shirts", href: "/urbanwear/women/tees", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" },
               { name: "Accessories", href: "/urbanwear/accessories", image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500" }
             ].map((category, index) => (
               <Link key={index} href={category.href}>
@@ -376,7 +486,7 @@ export default function UrbanWearHome() {
             </div>
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="https://cdn.pixabay.com/photo/2021/10/28/14/32/jeans-6749852_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=600"
+                src="https://images.unsplash.com/photo-1569163139394-de4e4f43e4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=600"
                 alt="Sustainable materials"
                 className="w-full h-full object-cover"
               />

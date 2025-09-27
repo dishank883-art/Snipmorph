@@ -100,7 +100,7 @@ export default function UrbanWearAbout() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <img
-                src="https://cdn.pixabay.com/photo/2021/07/11/18/31/seedling-6404598_1280.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                src="https://images.unsplash.com/photo-1569163139394-de44ede02e84?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
                 alt="Tree planting"
                 className="w-full rounded-2xl shadow-lg"
               />
