@@ -20,15 +20,6 @@ export default function UrbanWearHome() {
   const [womenMenuOpen, setWomenMenuOpen] = useState(false);
   const [menMenuOpen, setMenMenuOpen] = useState(false);
 
-  // Fetch new arrivals
-  const { data: newArrivals = [], isLoading: newArrivalsLoading } = useQuery<Product[]>({
-    queryKey: ['/api/new-arrivals'],
-    queryFn: async () => {
-      const response = await fetch('/api/new-arrivals?limit=8');
-      if (!response.ok) throw new Error('Failed to fetch new arrivals');
-      return response.json();
-    }
-  });
 
   // Tree counter animation
   const animatedTreeCount = treesPlanted.toLocaleString();
