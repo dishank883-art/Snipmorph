@@ -258,7 +258,7 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>urbanwear - sustainable clothing that plants trees</title>
+    <title>UrbanWear - Sustainable Clothing That Plants Trees</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -295,32 +295,32 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div onclick="showSection('home')" class="text-2xl font-bold text-gray-900 cursor-pointer hover:eco-green transition-colors">
-                    <i class="fas fa-seedling eco-green mr-2"></i>urbanwear
+                    <i class="fas fa-seedling eco-green mr-2"></i>UrbanWear
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <div class="nav-item relative">
-                        <a onclick="showSection('shop-women')" class="nav-link text-gray-700 hover:text-gray-900 font-medium cursor-pointer">women's</a>
+                        <a onclick="showSection('shop-women')" class="nav-link text-gray-700 hover:text-gray-900 font-medium cursor-pointer">Women's</a>
                         <div class="nav-dropdown">
-                            <a onclick="showSection('shop-women')" class="block py-2 text-gray-700 hover:eco-green">hoodies & sweatshirts</a>
-                            <a onclick="showSection('shop-women')" class="block py-2 text-gray-700 hover:eco-green">t-shirts & tops</a>
-                            <a onclick="showSection('shop-women')" class="block py-2 text-gray-700 hover:eco-green">pants & joggers</a>
-                            <a onclick="showSection('shop-women')" class="block py-2 text-gray-700 hover:eco-green">dresses</a>
+                            <a onclick="showSection('shop-women'); setTimeout(() => filterProducts('women', 'hoodies'), 100)" class="block py-2 text-gray-700 hover:eco-green">Hoodies & Sweatshirts</a>
+                            <a onclick="showSection('shop-women'); setTimeout(() => filterProducts('women', 'tees'), 100)" class="block py-2 text-gray-700 hover:eco-green">T-Shirts & Tops</a>
+                            <a onclick="showSection('shop-women'); setTimeout(() => filterProducts('women', 'pants'), 100)" class="block py-2 text-gray-700 hover:eco-green">Pants & Joggers</a>
+                            <a onclick="showSection('shop-women'); setTimeout(() => filterProducts('women', 'dresses'), 100)" class="block py-2 text-gray-700 hover:eco-green">Dresses</a>
                         </div>
                     </div>
                     <div class="nav-item relative">
-                        <a onclick="showSection('shop-men')" class="nav-link text-gray-700 hover:text-gray-900 font-medium cursor-pointer">men's</a>
+                        <a onclick="showSection('shop-men')" class="nav-link text-gray-700 hover:text-gray-900 font-medium cursor-pointer">Men's</a>
                         <div class="nav-dropdown">
-                            <a onclick="showSection('shop-men')" class="block py-2 text-gray-700 hover:eco-green">hoodies & sweatshirts</a>
-                            <a onclick="showSection('shop-men')" class="block py-2 text-gray-700 hover:eco-green">t-shirts</a>
-                            <a onclick="showSection('shop-men')" class="block py-2 text-gray-700 hover:eco-green">pants & joggers</a>
+                            <a onclick="showSection('shop-men'); setTimeout(() => filterProducts('men', 'hoodies'), 100)" class="block py-2 text-gray-700 hover:eco-green">Hoodies & Sweatshirts</a>
+                            <a onclick="showSection('shop-men'); setTimeout(() => filterProducts('men', 'tees'), 100)" class="block py-2 text-gray-700 hover:eco-green">T-Shirts</a>
+                            <a onclick="showSection('shop-men'); setTimeout(() => filterProducts('men', 'pants'), 100)" class="block py-2 text-gray-700 hover:eco-green">Pants & Joggers</a>
                         </div>
                     </div>
-                    <a onclick="showSection('sustainability')" class="nav-link text-gray-700 hover:text-gray-900 font-medium">our impact</a>
-                    <a onclick="showSection('about')" class="nav-link text-gray-700 hover:text-gray-900 font-medium">about</a>
+                    <a onclick="showSection('sustainability')" class="nav-link text-gray-700 hover:text-gray-900 font-medium">Our Impact</a>
+                    <a onclick="showSection('about')" class="nav-link text-gray-700 hover:text-gray-900 font-medium">About</a>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <i class="fas fa-search text-gray-600 hover:text-gray-900 cursor-pointer text-lg"></i>
-                    <i class="fas fa-heart text-gray-600 hover:text-gray-900 cursor-pointer text-lg"></i>
+                    <i onclick="performGlobalSearch()" class="fas fa-search text-gray-600 hover:text-gray-900 cursor-pointer text-lg" title="Search products"></i>
+                    <i onclick="toggleWishlist()" class="fas fa-heart text-gray-600 hover:text-red-500 cursor-pointer text-lg" title="Wishlist"></i>
                     <div class="relative">
                         <i onclick="showSection('cart')" class="fas fa-shopping-bag text-gray-600 hover:text-gray-900 cursor-pointer text-lg"></i>
                         <span id="cart-count" class="cart-count">3</span>
@@ -337,11 +337,11 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
         <div class="bg-gradient-to-br from-green-50 to-emerald-100 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h1 class="text-6xl font-bold mb-6 text-gray-900 leading-tight">comfort made sustainable</h1>
-                    <p class="text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">every piece plants trees, captures carbon, and creates positive impact. because feeling good should do good too.</p>
+                    <h1 class="text-6xl font-bold mb-6 text-gray-900 leading-tight">Comfort Made Sustainable</h1>
+                    <p class="text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">Every piece plants trees, captures carbon, and creates positive impact. Because feeling good should do good too.</p>
                     <div class="flex justify-center gap-6 mb-12">
-                        <button onclick="showSection('shop-women')" class="sustainability-badge text-white px-10 py-4 rounded-friendly font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-lg">shop women's</button>
-                        <button onclick="showSection('shop-men')" class="bg-gray-900 text-white px-10 py-4 rounded-friendly font-semibold text-lg hover:bg-gray-800 transition-all duration-300">shop men's</button>
+                        <button onclick="showSection('shop-women')" class="sustainability-badge text-white px-10 py-4 rounded-friendly font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-lg">SHOP WOMEN'S</button>
+                        <button onclick="showSection('shop-men')" class="bg-gray-900 text-white px-10 py-4 rounded-friendly font-semibold text-lg hover:bg-gray-800 transition-all duration-300">SHOP MEN'S</button>
                     </div>
                 </div>
                 
@@ -354,8 +354,8 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                                 <i class="fas fa-leaf eco-green mr-2"></i>
                                 <span class="text-sm eco-green font-medium">plants 5 trees</span>
                             </div>
-                            <h3 class="text-xl font-semibold mb-2">organic comfort hoodie</h3>
-                            <p class="text-gray-600 text-sm mb-3">made from 100% organic cotton</p>
+                            <h3 class="text-xl font-semibold mb-2">Organic Comfort Hoodie</h3>
+                            <p class="text-gray-600 text-sm mb-3">Made from 100% organic cotton</p>
                             <div class="text-2xl font-bold">$78</div>
                         </div>
                     </div>
@@ -366,8 +366,8 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                                 <i class="fas fa-recycle eco-green mr-2"></i>
                                 <span class="text-sm eco-green font-medium">recycled materials</span>
                             </div>
-                            <h3 class="text-xl font-semibold mb-2">everyday impact tee</h3>
-                            <p class="text-gray-600 text-sm mb-3">soft & sustainable basics</p>
+                            <h3 class="text-xl font-semibold mb-2">Everyday Impact Tee</h3>
+                            <p class="text-gray-600 text-sm mb-3">Soft & sustainable basics</p>
                             <div class="text-2xl font-bold">$35</div>
                         </div>
                     </div>
@@ -378,8 +378,8 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                                 <i class="fas fa-seedling eco-green mr-2"></i>
                                 <span class="text-sm eco-green font-medium">bamboo blend</span>
                             </div>
-                            <h3 class="text-xl font-semibold mb-2">earth joggers</h3>
-                            <p class="text-gray-600 text-sm mb-3">ultra-soft bamboo comfort</p>
+                            <h3 class="text-xl font-semibold mb-2">Earth Joggers</h3>
+                            <p class="text-gray-600 text-sm mb-3">Ultra-soft bamboo comfort</p>
                             <div class="text-2xl font-bold">$68</div>
                         </div>
                     </div>
@@ -410,18 +410,26 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
     <section id="shop-women" class="section py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-gray-900 mb-6">women's sustainable collection</h2>
-                <p class="text-xl text-gray-600 mb-8">comfort meets consciousness in every piece</p>
+                <h2 class="text-5xl font-bold text-gray-900 mb-6">Women's Sustainable Collection</h2>
+                <p class="text-xl text-gray-600 mb-8">Comfort meets consciousness in every piece</p>
+                <!-- Search Bar -->
+                <div class="max-w-md mx-auto mb-8">
+                    <div class="relative">
+                        <input type="text" id="search-input-women" placeholder="Search women's products..." class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-friendly focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" onkeyup="searchProducts('women')">
+                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+                
                 <div class="flex justify-center space-x-4 mb-12">
-                    <button class="bg-green-100 eco-green px-6 py-2 rounded-friendly font-medium">all</button>
-                    <button class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors">hoodies</button>
-                    <button class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors">tees</button>
-                    <button class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors">pants</button>
-                    <button class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors">dresses</button>
+                    <button onclick="filterProducts('women', 'all')" class="bg-green-100 eco-green px-6 py-2 rounded-friendly font-medium category-filter active" data-category="all">All</button>
+                    <button onclick="filterProducts('women', 'hoodies')" class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors category-filter" data-category="hoodies">Hoodies</button>
+                    <button onclick="filterProducts('women', 'tees')" class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors category-filter" data-category="tees">T-Shirts</button>
+                    <button onclick="filterProducts('women', 'pants')" class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors category-filter" data-category="pants">Pants & Joggers</button>
+                    <button onclick="filterProducts('women', 'dresses')" class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors category-filter" data-category="dresses">Dresses</button>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div onclick="showProductDetail('womens-hoodie')" class="card-hover bg-gray-50 rounded-friendly overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="women-products">
+                <div onclick="showProductDetail('womens-hoodie')" class="card-hover bg-gray-50 rounded-friendly overflow-hidden product-item" data-category="hoodies" data-name="Cozy Comfort Hoodie" data-material="organic cotton">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500" alt="Women's Hoodie" class="w-full h-80 object-cover" />
                         <div class="absolute top-4 left-4 sustainability-badge text-white px-3 py-1 rounded-full text-xs font-medium">plants 5 trees</div>
@@ -431,15 +439,18 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                             <i class="fas fa-leaf eco-green mr-2 text-sm"></i>
                             <span class="text-xs eco-green font-medium uppercase tracking-wide">organic cotton</span>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">cozy comfort hoodie</h3>
-                        <p class="text-gray-600 mb-4 text-sm">ultra-soft organic fleece</p>
+                        <h3 class="text-xl font-semibold mb-2">Cozy Comfort Hoodie</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Ultra-soft organic fleece</p>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold">$78</span>
-                            <button onclick="event.stopPropagation(); addToCart('womens-hoodie', 'cozy comfort hoodie', 78)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">add to cart</button>
+                            <div class="flex items-center gap-2">
+                                <i onclick="event.stopPropagation(); toggleWishlist('womens-hoodie')" class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer transition-colors" title="Add to wishlist"></i>
+                                <button onclick="event.stopPropagation(); addToCart('womens-hoodie', 'Cozy Comfort Hoodie', 78)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div onclick="showProductDetail('womens-tee')" class="card-hover bg-gray-50 rounded-friendly overflow-hidden">
+                <div onclick="showProductDetail('womens-tee')" class="card-hover bg-gray-50 rounded-friendly overflow-hidden product-item" data-category="tees" data-name="Everyday Impact Tee" data-material="recycled fibers">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500" alt="Women's T-Shirt" class="w-full h-80 object-cover" />
                         <div class="absolute top-4 left-4 sustainability-badge text-white px-3 py-1 rounded-full text-xs font-medium">plants 5 trees</div>
@@ -449,15 +460,18 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                             <i class="fas fa-recycle eco-green mr-2 text-sm"></i>
                             <span class="text-xs eco-green font-medium uppercase tracking-wide">recycled fibers</span>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">everyday impact tee</h3>
-                        <p class="text-gray-600 mb-4 text-sm">soft sustainable basics</p>
+                        <h3 class="text-xl font-semibold mb-2">Everyday Impact Tee</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Soft sustainable basics</p>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold">$35</span>
-                            <button onclick="event.stopPropagation(); addToCart('womens-tee', 'everyday impact tee', 35)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">add to cart</button>
+                            <div class="flex items-center gap-2">
+                                <i onclick="event.stopPropagation(); toggleWishlist('womens-tee')" class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer transition-colors" title="Add to wishlist"></i>
+                                <button onclick="event.stopPropagation(); addToCart('womens-tee', 'Everyday Impact Tee', 35)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div onclick="showProductDetail('womens-joggers')" class="card-hover bg-gray-50 rounded-friendly overflow-hidden">
+                <div onclick="showProductDetail('womens-joggers')" class="card-hover bg-gray-50 rounded-friendly overflow-hidden product-item" data-category="pants" data-name="Earth Joggers" data-material="bamboo blend">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500" alt="Women's Joggers" class="w-full h-80 object-cover" />
                         <div class="absolute top-4 left-4 sustainability-badge text-white px-3 py-1 rounded-full text-xs font-medium">plants 5 trees</div>
@@ -467,15 +481,18 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                             <i class="fas fa-seedling eco-green mr-2 text-sm"></i>
                             <span class="text-xs eco-green font-medium uppercase tracking-wide">bamboo blend</span>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">earth joggers</h3>
-                        <p class="text-gray-600 mb-4 text-sm">ultra-soft bamboo comfort</p>
+                        <h3 class="text-xl font-semibold mb-2">Earth Joggers</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Ultra-soft bamboo comfort</p>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold">$68</span>
-                            <button onclick="event.stopPropagation(); addToCart('womens-joggers', 'earth joggers', 68)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">add to cart</button>
+                            <div class="flex items-center gap-2">
+                                <i onclick="event.stopPropagation(); toggleWishlist('womens-joggers')" class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer transition-colors" title="Add to wishlist"></i>
+                                <button onclick="event.stopPropagation(); addToCart('womens-joggers', 'Earth Joggers', 68)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div onclick="showProductDetail('womens-dress')" class="card-hover bg-gray-50 rounded-friendly overflow-hidden">
+                <div onclick="showProductDetail('womens-dress')" class="card-hover bg-gray-50 rounded-friendly overflow-hidden product-item" data-category="dresses" data-name="Flow Midi Dress" data-material="tencel lyocell">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500" alt="Women's Dress" class="w-full h-80 object-cover" />
                         <div class="absolute top-4 left-4 sustainability-badge text-white px-3 py-1 rounded-full text-xs font-medium">plants 5 trees</div>
@@ -485,11 +502,14 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                             <i class="fas fa-water eco-green mr-2 text-sm"></i>
                             <span class="text-xs eco-green font-medium uppercase tracking-wide">tencel lyocell</span>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">flow midi dress</h3>
-                        <p class="text-gray-600 mb-4 text-sm">breathable & sustainable</p>
+                        <h3 class="text-xl font-semibold mb-2">Flow Midi Dress</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Breathable & sustainable</p>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold">$88</span>
-                            <button onclick="event.stopPropagation(); addToCart('womens-dress', 'flow midi dress', 88)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">add to cart</button>
+                            <div class="flex items-center gap-2">
+                                <i onclick="event.stopPropagation(); toggleWishlist('womens-dress')" class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer transition-colors" title="Add to wishlist"></i>
+                                <button onclick="event.stopPropagation(); addToCart('womens-dress', 'Flow Midi Dress', 88)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -501,11 +521,26 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
     <section id="shop-men" class="section py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-gray-900 mb-6">men's sustainable collection</h2>
-                <p class="text-xl text-gray-600">built for comfort, designed for impact</p>
+                <h2 class="text-5xl font-bold text-gray-900 mb-6">Men's Sustainable Collection</h2>
+                <p class="text-xl text-gray-600 mb-8">Built for comfort, designed for impact</p>
+                
+                <!-- Search Bar -->
+                <div class="max-w-md mx-auto mb-8">
+                    <div class="relative">
+                        <input type="text" id="search-input-men" placeholder="Search men's products..." class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-friendly focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" onkeyup="searchProducts('men')">
+                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center space-x-4 mb-12">
+                    <button onclick="filterProducts('men', 'all')" class="bg-green-100 eco-green px-6 py-2 rounded-friendly font-medium category-filter active" data-category="all">All</button>
+                    <button onclick="filterProducts('men', 'hoodies')" class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors category-filter" data-category="hoodies">Hoodies</button>
+                    <button onclick="filterProducts('men', 'tees')" class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors category-filter" data-category="tees">T-Shirts</button>
+                    <button onclick="filterProducts('men', 'pants')" class="text-gray-600 hover:eco-green px-6 py-2 rounded-friendly transition-colors category-filter" data-category="pants">Pants & Joggers</button>
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div onclick="showProductDetail('mens-hoodie')" class="card-hover bg-white rounded-friendly overflow-hidden shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="men-products">
+                <div onclick="showProductDetail('mens-hoodie')" class="card-hover bg-white rounded-friendly overflow-hidden shadow-lg product-item" data-category="hoodies" data-name="Classic Comfort Hoodie" data-material="organic cotton">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500" alt="Men's Hoodie" class="w-full h-80 object-cover" />
                         <div class="absolute top-4 left-4 sustainability-badge text-white px-3 py-1 rounded-full text-xs font-medium">plants 5 trees</div>
@@ -515,15 +550,18 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                             <i class="fas fa-leaf eco-green mr-2 text-sm"></i>
                             <span class="text-xs eco-green font-medium uppercase tracking-wide">organic cotton</span>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">classic comfort hoodie</h3>
-                        <p class="text-gray-600 mb-4 text-sm">premium organic fleece</p>
+                        <h3 class="text-xl font-semibold mb-2">Classic Comfort Hoodie</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium organic fleece</p>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold">$82</span>
-                            <button onclick="event.stopPropagation(); addToCart('mens-hoodie', 'classic comfort hoodie', 82)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">add to cart</button>
+                            <div class="flex items-center gap-2">
+                                <i onclick="event.stopPropagation(); toggleWishlist('mens-hoodie')" class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer transition-colors" title="Add to wishlist"></i>
+                                <button onclick="event.stopPropagation(); addToCart('mens-hoodie', 'Classic Comfort Hoodie', 82)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div onclick="showProductDetail('mens-tee')" class="card-hover bg-white rounded-friendly overflow-hidden shadow-lg">
+                <div onclick="showProductDetail('mens-tee')" class="card-hover bg-white rounded-friendly overflow-hidden shadow-lg product-item" data-category="tees" data-name="Essential Impact Tee" data-material="recycled cotton">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1583743814966-8936f37f1c78?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500" alt="Men's T-Shirt" class="w-full h-80 object-cover" />
                         <div class="absolute top-4 left-4 sustainability-badge text-white px-3 py-1 rounded-full text-xs font-medium">plants 5 trees</div>
@@ -533,15 +571,18 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                             <i class="fas fa-recycle eco-green mr-2 text-sm"></i>
                             <span class="text-xs eco-green font-medium uppercase tracking-wide">recycled cotton</span>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">essential impact tee</h3>
-                        <p class="text-gray-600 mb-4 text-sm">everyday sustainable comfort</p>
+                        <h3 class="text-xl font-semibold mb-2">Essential Impact Tee</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Everyday sustainable comfort</p>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold">$38</span>
-                            <button onclick="event.stopPropagation(); addToCart('mens-tee', 'essential impact tee', 38)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">add to cart</button>
+                            <div class="flex items-center gap-2">
+                                <i onclick="event.stopPropagation(); toggleWishlist('mens-tee')" class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer transition-colors" title="Add to wishlist"></i>
+                                <button onclick="event.stopPropagation(); addToCart('mens-tee', 'Essential Impact Tee', 38)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div onclick="showProductDetail('mens-joggers')" class="card-hover bg-white rounded-friendly overflow-hidden shadow-lg">
+                <div onclick="showProductDetail('mens-joggers')" class="card-hover bg-white rounded-friendly overflow-hidden shadow-lg product-item" data-category="pants" data-name="Adventure Joggers" data-material="hemp blend">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500" alt="Men's Joggers" class="w-full h-80 object-cover" />
                         <div class="absolute top-4 left-4 sustainability-badge text-white px-3 py-1 rounded-full text-xs font-medium">plants 5 trees</div>
@@ -551,15 +592,18 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                             <i class="fas fa-seedling eco-green mr-2 text-sm"></i>
                             <span class="text-xs eco-green font-medium uppercase tracking-wide">hemp blend</span>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">adventure joggers</h3>
-                        <p class="text-gray-600 mb-4 text-sm">durable hemp comfort</p>
+                        <h3 class="text-xl font-semibold mb-2">Adventure Joggers</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Durable hemp comfort</p>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold">$72</span>
-                            <button onclick="event.stopPropagation(); addToCart('mens-joggers', 'adventure joggers', 72)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">add to cart</button>
+                            <div class="flex items-center gap-2">
+                                <i onclick="event.stopPropagation(); toggleWishlist('mens-joggers')" class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer transition-colors" title="Add to wishlist"></i>
+                                <button onclick="event.stopPropagation(); addToCart('mens-joggers', 'Adventure Joggers', 72)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div onclick="showProductDetail('mens-sweatshirt')" class="card-hover bg-white rounded-friendly overflow-hidden shadow-lg">
+                <div onclick="showProductDetail('mens-sweatshirt')" class="card-hover bg-white rounded-friendly overflow-hidden shadow-lg product-item" data-category="hoodies" data-name="Heritage Sweatshirt" data-material="organic fleece">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500" alt="Men's Sweatshirt" class="w-full h-80 object-cover" />
                         <div class="absolute top-4 left-4 sustainability-badge text-white px-3 py-1 rounded-full text-xs font-medium">plants 5 trees</div>
@@ -569,11 +613,14 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                             <i class="fas fa-leaf eco-green mr-2 text-sm"></i>
                             <span class="text-xs eco-green font-medium uppercase tracking-wide">organic fleece</span>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">heritage sweatshirt</h3>
-                        <p class="text-gray-600 mb-4 text-sm">timeless sustainable style</p>
+                        <h3 class="text-xl font-semibold mb-2">Heritage Sweatshirt</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Timeless sustainable style</p>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold">$65</span>
-                            <button onclick="event.stopPropagation(); addToCart('mens-sweatshirt', 'heritage sweatshirt', 65)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">add to cart</button>
+                            <div class="flex items-center gap-2">
+                                <i onclick="event.stopPropagation(); toggleWishlist('mens-sweatshirt')" class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer transition-colors" title="Add to wishlist"></i>
+                                <button onclick="event.stopPropagation(); addToCart('mens-sweatshirt', 'Heritage Sweatshirt', 65)" class="sustainability-badge text-white px-6 py-2 rounded-friendly font-medium hover:scale-105 transition-all">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -599,7 +646,7 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                         </div>
                     </div>
                     
-                    <h1 id="product-title" class="text-5xl font-bold mb-4">organic comfort hoodie</h1>
+                    <h1 id="product-title" class="text-5xl font-bold mb-4">Organic Comfort Hoodie</h1>
                     <div class="flex items-center mb-6">
                         <span id="product-price" class="text-4xl font-bold mr-6">$78</span>
                         <div class="text-gray-600">
@@ -612,7 +659,7 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                         </div>
                     </div>
                     
-                    <p id="product-description" class="text-xl text-gray-600 mb-8 leading-relaxed">made from 100% organic cotton that's grown without harmful pesticides. ultra-soft fleece lining for maximum comfort. every purchase plants 5 trees and supports regenerative farming practices.</p>
+                    <p id="product-description" class="text-xl text-gray-600 mb-8 leading-relaxed">Made from 100% organic cotton that's grown without harmful pesticides. Ultra-soft fleece lining for maximum comfort. Every purchase plants 5 trees and supports regenerative farming practices.</p>
                     
                     <!-- Material Details -->
                     <div class="bg-green-50 p-6 rounded-friendly mb-8">
@@ -638,21 +685,22 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
                     </div>
                     
                     <div class="mb-8">
-                        <h3 class="text-lg font-semibold mb-4">size</h3>
+                        <h3 class="text-lg font-semibold mb-4">Size</h3>
                         <div class="flex gap-3">
-                            <button class="border-2 border-gray-300 px-4 py-2 rounded-friendly hover:border-green-500 transition-colors">xs</button>
-                            <button class="border-2 border-gray-300 px-4 py-2 rounded-friendly hover:border-green-500 transition-colors">s</button>
-                            <button class="border-2 border-green-500 bg-green-500 text-white px-4 py-2 rounded-friendly">m</button>
-                            <button class="border-2 border-gray-300 px-4 py-2 rounded-friendly hover:border-green-500 transition-colors">l</button>
-                            <button class="border-2 border-gray-300 px-4 py-2 rounded-friendly hover:border-green-500 transition-colors">xl</button>
+                            <button onclick="selectSize('XS')" class="size-btn border-2 border-gray-300 px-4 py-2 rounded-friendly hover:border-green-500 transition-colors" data-size="XS">XS</button>
+                            <button onclick="selectSize('S')" class="size-btn border-2 border-gray-300 px-4 py-2 rounded-friendly hover:border-green-500 transition-colors" data-size="S">S</button>
+                            <button onclick="selectSize('M')" class="size-btn border-2 border-green-500 bg-green-500 text-white px-4 py-2 rounded-friendly selected" data-size="M">M</button>
+                            <button onclick="selectSize('L')" class="size-btn border-2 border-gray-300 px-4 py-2 rounded-friendly hover:border-green-500 transition-colors" data-size="L">L</button>
+                            <button onclick="selectSize('XL')" class="size-btn border-2 border-gray-300 px-4 py-2 rounded-friendly hover:border-green-500 transition-colors" data-size="XL">XL</button>
                         </div>
+                        <p class="text-sm text-gray-500 mt-2">Size guide available - true to size fit</p>
                     </div>
                     
                     <div class="flex gap-4">
                         <button onclick="addToCartFromProduct()" class="sustainability-badge text-white px-8 py-4 rounded-friendly font-semibold hover:scale-105 transition-all flex-1">
-                            <i class="fas fa-shopping-cart mr-2"></i>add to cart - plants 5 trees
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart - Plants 5 Trees
                         </button>
-                        <button class="border-2 border-gray-300 text-gray-600 px-4 py-4 rounded-friendly font-semibold hover:border-red-400 hover:text-red-400 transition-colors">
+                        <button onclick="toggleWishlist('current-product')" class="border-2 border-gray-300 text-gray-600 px-4 py-4 rounded-friendly font-semibold hover:border-red-400 hover:text-red-400 transition-colors">
                             <i class="fas fa-heart"></i>
                         </button>
                     </div>
@@ -1255,6 +1303,147 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
         document.body.appendChild(notification);
     }
     
+    // Filter products by category
+    function filterProducts(section, category) {
+        const productsContainer = document.getElementById(section + '-products');
+        const products = productsContainer.querySelectorAll('.product-item');
+        const filterButtons = document.querySelectorAll('.category-filter');
+        
+        // Update active filter button
+        filterButtons.forEach(btn => btn.classList.remove('active', 'bg-green-100', 'eco-green'));
+        filterButtons.forEach(btn => btn.classList.add('text-gray-600'));
+        event.target.classList.add('active', 'bg-green-100', 'eco-green');
+        event.target.classList.remove('text-gray-600');
+        
+        // Show/hide products
+        products.forEach(product => {
+            if (category === 'all' || product.dataset.category === category) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+    
+    // Search products
+    function searchProducts(section) {
+        const searchInput = document.getElementById('search-input-' + section);
+        const searchTerm = searchInput.value.toLowerCase();
+        const productsContainer = document.getElementById(section + '-products');
+        const products = productsContainer.querySelectorAll('.product-item');
+        
+        products.forEach(product => {
+            const productName = product.dataset.name.toLowerCase();
+            const productMaterial = product.dataset.material.toLowerCase();
+            const productDescription = product.querySelector('p').textContent.toLowerCase();
+            
+            if (productName.includes(searchTerm) || 
+                productMaterial.includes(searchTerm) || 
+                productDescription.includes(searchTerm)) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+    
+    // Global search in header
+    function performGlobalSearch() {
+        // Create and show search overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+        overlay.innerHTML = 
+            '<div class="bg-white p-8 rounded-friendly shadow-2xl max-w-lg mx-4 w-full">' +
+                '<div class="flex justify-between items-center mb-6">' +
+                    '<h3 class="text-2xl font-bold">Search UrbanWear</h3>' +
+                    '<button onclick="this.parentElement.parentElement.parentElement.remove()" class="text-gray-400 hover:text-gray-600">' +
+                        '<i class="fas fa-times text-xl"></i>' +
+                    '</button>' +
+                '</div>' +
+                '<div class="relative mb-6">' +
+                    '<input type="text" id="global-search" placeholder="Search for products, materials, or categories..." class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-friendly focus:outline-none focus:ring-2 focus:ring-green-500">' +
+                    '<i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>' +
+                '</div>' +
+                '<div class="flex gap-3">' +
+                    '<button onclick="searchInSection(\\'women\\'); this.parentElement.parentElement.parentElement.remove()" class="sustainability-badge text-white px-6 py-3 rounded-friendly font-semibold flex-1">Search Women\\'s</button>' +
+                    '<button onclick="searchInSection(\\'men\\'); this.parentElement.parentElement.parentElement.remove()" class="bg-gray-900 text-white px-6 py-3 rounded-friendly font-semibold flex-1">Search Men\\'s</button>' +
+                '</div>' +
+            '</div>';
+        
+        document.body.appendChild(overlay);
+        
+        // Focus the search input
+        setTimeout(() => {
+            document.getElementById('global-search').focus();
+        }, 100);
+    }
+    
+    // Search in specific section
+    function searchInSection(section) {
+        const globalSearch = document.getElementById('global-search');
+        const searchTerm = globalSearch ? globalSearch.value : '';
+        
+        // Navigate to section
+        showSection('shop-' + section);
+        
+        // Wait for section to load, then search
+        setTimeout(() => {
+            const sectionSearchInput = document.getElementById('search-input-' + section);
+            if (sectionSearchInput && searchTerm) {
+                sectionSearchInput.value = searchTerm;
+                searchProducts(section);
+            }
+        }, 200);
+    }
+    
+    // Wishlist functionality
+    let wishlistItems = new Set();
+    function toggleWishlist(productId = null) {
+        if (!productId) {
+            // Show wishlist overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            overlay.innerHTML = 
+                '<div class="bg-white p-8 rounded-friendly shadow-2xl max-w-md mx-4">' +
+                    '<div class="flex justify-between items-center mb-6">' +
+                        '<h3 class="text-2xl font-bold">Your Wishlist</h3>' +
+                        '<button onclick="this.parentElement.parentElement.parentElement.remove()" class="text-gray-400 hover:text-gray-600">' +
+                            '<i class="fas fa-times text-xl"></i>' +
+                        '</button>' +
+                    '</div>' +
+                    '<div class="text-center">' +
+                        '<i class="fas fa-heart text-4xl eco-green mb-4"></i>' +
+                        '<p class="text-gray-600 mb-4">Click the heart icon on any product to add it to your wishlist!</p>' +
+                        '<p class="text-sm text-gray-500">Wishlist items: ' + wishlistItems.size + '</p>' +
+                    '</div>' +
+                '</div>';
+            document.body.appendChild(overlay);
+        } else {
+            // Toggle product in wishlist
+            if (wishlistItems.has(productId)) {
+                wishlistItems.delete(productId);
+            } else {
+                wishlistItems.add(productId);
+            }
+            
+            // Show feedback
+            const message = wishlistItems.has(productId) ? 'Added to wishlist!' : 'Removed from wishlist';
+            showNotification(message, wishlistItems.has(productId) ? 'heart' : 'heart-broken');
+        }
+    }
+    
+    // Show notification helper
+    function showNotification(message, icon = 'check') {
+        const notification = document.createElement('div');
+        notification.className = 'fixed top-4 right-4 sustainability-badge text-white px-6 py-4 rounded-friendly shadow-lg z-50 flex items-center space-x-2';
+        notification.innerHTML = '<i class="fas fa-' + icon + '"></i><span>' + message + '</span>';
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.remove();
+        }, 3000);
+    }
+    
     // Animate tree counter on page load
     setTimeout(() => {
         const counters = document.querySelectorAll('.tree-counter');
@@ -1275,6 +1464,40 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
             animate();
         });
     }, 1000);
+    
+    // Size selection functionality
+    let selectedSize = 'M';
+    function selectSize(size) {
+        selectedSize = size;
+        
+        // Update UI
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.classList.remove('border-green-500', 'bg-green-500', 'text-white', 'selected');
+            btn.classList.add('border-gray-300');
+        });
+        
+        const selectedBtn = document.querySelector('[data-size="' + size + '"]');
+        if (selectedBtn) {
+            selectedBtn.classList.add('border-green-500', 'bg-green-500', 'text-white', 'selected');
+            selectedBtn.classList.remove('border-gray-300');
+        }
+        
+        showNotification('Size ' + size + ' selected', 'check-circle');
+    }
+    
+    // Add to cart from product detail page
+    function addToCartFromProduct() {
+        const productTitle = document.getElementById('product-title').textContent;
+        const productPrice = document.querySelector('#product-detail .text-4xl').textContent;
+        const price = parseInt(productPrice.replace('$', ''));
+        
+        // Update cart count
+        const cartCount = document.getElementById('cart-count');
+        let count = parseInt(cartCount.textContent);
+        cartCount.textContent = count + 1;
+        
+        showNotification('Added ' + productTitle + ' (' + selectedSize + ') to cart - Plants 5 trees!', 'shopping-cart');
+    }
     </script>
 </body>
 </html>
