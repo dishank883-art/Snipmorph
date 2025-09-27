@@ -408,7 +408,11 @@ export default function PortfolioModal({ projectId, onClose }: PortfolioModalPro
   if (!projectId) return null;
 
   return (
-    <div className={`modal ${projectId ? 'show' : ''}`} onClick={onClose}>
+    <div 
+      className={`modal ${projectId ? 'show' : ''}`} 
+      onClick={onClose}
+      style={{ alignItems: 'center', justifyContent: 'center' }}
+    >
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button 
           className="modal-close" 
