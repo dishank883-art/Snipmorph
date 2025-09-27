@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { useLocation } from "wouter";
 import PortfolioModal from "./portfolio-modal";
 
 export default function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const [, navigate] = useLocation();
 
   const projects = [
     {
@@ -61,6 +63,8 @@ export default function Portfolio() {
               onClick={() => {
                 if (project.externalUrl) {
                   window.open(project.externalUrl, '_blank', 'noopener,noreferrer');
+                } else if (project.id === 'urbanwear') {
+                  navigate('/urbanwear');
                 } else {
                   setSelectedProject(project.id);
                 }
