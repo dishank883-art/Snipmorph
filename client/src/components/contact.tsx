@@ -69,12 +69,12 @@ export default function Contact() {
     {
       icon: <Phone className="text-xl" />,
       title: "Call Us",
-      subtitle: "+91-9719873804"
+      subtitle: "+91-9259488318"
     },
     {
       icon: <Clock className="text-xl" />,
       title: "Business Hours",
-      subtitle: "Mon-Fri: 9AM-6PM IST"
+      subtitle: "Available 24/7"
     }
   ];
 

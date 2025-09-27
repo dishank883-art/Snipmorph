@@ -3,22 +3,22 @@ import { Star } from "lucide-react";
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "Marcus Chen",
-      role: "CEO, Global Innovations Ltd",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      content: "Snipmorph delivered beyond our expectations. The website they created perfectly captures our brand essence and has significantly improved our online conversions."
+      name: "Priya Sharma",
+      role: "Shopify Store Owner",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      content: "Snipmorph helped me launch my online store perfectly. The design is beautiful and my customers love the shopping experience. My sales doubled within the first month!"
     },
     {
-      name: "Isabella Rodriguez",
-      role: "Founder, Luxe Boutique",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      content: "The e-commerce platform Snipmorph built for us is absolutely stunning. Our sales have increased by 180% since the launch. Exceptional work!"
+      name: "Raj Patel",
+      role: "Digital Marketing Agency Founder",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      content: "Starting my agency was a dream, and Snipmorph made it a reality with an incredible website. Professional, fast delivery, and exactly what I envisioned for my business."
     },
     {
-      name: "David Thompson",
-      role: "CTO, TechVision Solutions",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      content: "Professional, creative, and incredibly efficient. Snipmorph transformed our outdated website into a modern masterpiece that our customers love."
+      name: "Anita Gupta",
+      role: "Small Business Owner",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      content: "As a small business owner, I needed something affordable yet professional. Snipmorph delivered exactly that and helped me establish a strong online presence."
     }
   ];
 

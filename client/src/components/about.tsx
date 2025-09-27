@@ -33,7 +33,7 @@ export default function About() {
               About <span className="text-primary">Snipmorph</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              We are a fresh web design agency with a commitment to excellence and innovation. Though we're just getting started with 2-3 clients so far, we've already delivered exceptional results for each of them. We focus on creating premium digital experiences that help businesses establish a strong online presence and achieve their goals.
+              We are a fresh web design agency with a commitment to excellence and innovation. We focus on creating premium digital experiences that help businesses establish a strong online presence and achieve their goals. Quality, speed, and attention to detail are at the core of everything we do.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {stats.map((stat, index) => (
