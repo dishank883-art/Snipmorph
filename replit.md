@@ -2,6 +2,18 @@
 
 Snipmorph is a premium international web design agency website showcasing high-end web development services. The application demonstrates modern web design capabilities through an interactive portfolio featuring embedded sample websites for business consulting, e-commerce, and SaaS platforms. Built as a full-stack React application with Express.js backend, it serves as both a marketing website and a showcase of technical expertise in creating sophisticated web solutions for international clients.
 
+## Recent Updates (September 2025)
+
+The UrbanWear e-commerce demo has been updated to feature a more inclusive shopping experience:
+
+- **Consolidated Product Experience**: Replaced separate Women's and Men's product sections with a unified "Our Products" page that displays all items together
+- **Enhanced Navigation**: Streamlined navigation from dropdown menus to a single "Our Products" link for improved user experience  
+- **Comprehensive Filtering**: Added robust search functionality across product names, descriptions, categories, materials, and sustainability features
+- **Professional Image Handling**: Implemented error handling that automatically hides products with broken images to maintain demo quality
+- **Inclusive Design**: Removed gender-based categorization in favor of product-type categories (Hoodies, T-Shirts, Activewear, etc.)
+
+These changes demonstrate modern e-commerce best practices and create a more welcoming shopping experience for all customers, making it an excellent showcase for Shopify store development capabilities.
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
