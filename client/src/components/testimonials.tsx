@@ -5,7 +5,7 @@ export default function Testimonials() {
     {
       name: "Priya Sharma",
       role: "Shopify Store Owner",
-      image: "/attached_assets/stock_images/professional_indian__d0fbfb7e.jpg",
+      image: "https://cdn.pixabay.com/photo/2020/06/19/06/28/women-5315858_1280.jpg",
       content: "Snipmorph helped me launch my online store perfectly. The design is beautiful and my customers love the shopping experience. My sales doubled within the first month!"
     },
     {
