@@ -48,12 +48,7 @@ export default function About() {
                 </div>
               ))}
             </div>
-            <button 
-              className="cta-button text-white px-8 py-4 rounded-lg font-semibold text-lg"
-              data-testid="about-learn-more-button"
-            >
-              Learn More About Us
-            </button>
+            
           </div>
           <div className="fade-in">
             <img 
