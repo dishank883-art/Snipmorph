@@ -9,12 +9,22 @@ export default function Portfolio() {
 
   const projects = [
     {
-      id: "brightpath",
-      title: "BrightPath Consulting",
-      subtitle: "Business Website",
-      description: "Professional corporate website with clean design, showcasing consulting services and expertise.",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      tags: ["Corporate", "Multi-page", "Professional"]
+      id: "scrublou",
+      title: "Scrub Lou",
+      subtitle: "Professional Cleaning Service",
+      description: "Modern service business website with online booking system, service showcase, and local SEO optimization for Louisville's premier cleaning company.",
+      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      tags: ["Service Business", "Online Booking", "Local SEO"],
+      externalUrl: "https://scrublou.com"
+    },
+    {
+      id: "roaminsider",
+      title: "RoamInsider",
+      subtitle: "Travel Website for Digital Nomads",
+      description: "Custom travel platform designed specifically for digital nomads, featuring remote work-friendly destinations and resources.",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      tags: ["Travel", "Digital Nomads", "Custom Platform"],
+      externalUrl: "https://roaminsider.com"
     },
     {
       id: "urbanwear",
@@ -25,21 +35,20 @@ export default function Portfolio() {
       tags: ["E-commerce", "Luxury", "Shopping Cart"]
     },
     {
+      id: "brightpath",
+      title: "BrightPath Consulting",
+      subtitle: "Business Website",
+      description: "Professional corporate website with clean design, showcasing consulting services and expertise.",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      tags: ["Corporate", "Multi-page", "Professional"]
+    },
+    {
       id: "taskly",
       title: "Taskly AI",
       subtitle: "SaaS Landing Page",
       description: "Modern SaaS landing page with conversion-focused design and clear value proposition.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       tags: ["SaaS", "AI", "Landing Page"]
-    },
-    {
-      id: "roaminsider",
-      title: "RoamInsider",
-      subtitle: "Travel Website for Digital Nomads",
-      description: "Custom travel platform designed specifically for digital nomads, featuring remote work-friendly destinations and resources.",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      tags: ["Travel", "Digital Nomads", "Custom Platform"],
-      externalUrl: "https://roaminsider.com"
     }
   ];
 
