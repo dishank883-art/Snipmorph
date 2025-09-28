@@ -79,28 +79,42 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Get in <span className="text-primary">Touch</span>
+        <div className="text-center mb-20 fade-in">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-6">
+            📞 Let's Get The Ball Rolling
+          </div>
+          <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-8 leading-tight">
+            WE'RE NOT JUST A
+            <br />
+            <span className="text-primary font-serif italic">DIGITAL MARKETING</span>
+            <br />
+            SERVICE PROVIDER.
+            <br />
+            WE'RE YOUR PARTNERS IN
+            <span className="text-primary font-serif italic"> SUCCESS.</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to transform your digital presence? Let's discuss your project and create something amazing together.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium mb-12">
+            Ready to transform your digital presence? Let's discuss your project and create something amazing together that drives real business results.
           </p>
+          <button className="cta-button text-white px-12 py-5 rounded-xl font-bold text-xl mb-16">
+            GET A FREE 30 MIN STRATEGY SESSION
+          </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div className="fade-in">
+            <h3 className="text-3xl font-bold text-foreground mb-12 font-serif">Get In Touch</h3>
             <div className="space-y-8">
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-center">
-                  <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center mr-6">
+                <div key={index} className="flex items-start">
+                  <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mr-6 text-primary">
                     {info.icon}
                   </div>
                   <div>
-                    <div className="text-foreground font-semibold text-lg">{info.title}</div>
-                    <div className="text-muted-foreground">{info.subtitle}</div>
+                    <div className="text-foreground font-bold text-xl mb-2">{info.title}</div>
+                    <div className="text-muted-foreground text-lg font-medium">{info.subtitle}</div>
                   </div>
                 </div>
               ))}
@@ -108,18 +122,22 @@ export default function Contact() {
           </div>
 
           <div className="fade-in">
-  <div className="w-full h-[800px]">
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfBvrvvPkzJvv5QlovKui1v2xgV_TXe7ZfvU2r5Zk2tu8W1HA/viewform?embedded=true"
-      width="100%"
-      height="100%"
-      frameBorder="0"
-      marginHeight={0}
-      marginWidth={0}
-    >
-      Loading…
-    </iframe>
-  </div>
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
+              <h3 className="text-2xl font-bold text-foreground mb-6 font-serif">Start Your Project Today</h3>
+              <div className="w-full h-[600px]">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSfBvrvvPkzJvv5QlovKui1v2xgV_TXe7ZfvU2r5Zk2tu8W1HA/viewform?embedded=true"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  className="rounded-lg"
+                >
+                  Loading…
+                </iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>

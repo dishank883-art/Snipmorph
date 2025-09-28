@@ -23,41 +23,45 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Client <span className="text-primary">Testimonials</span>
+        <div className="text-center mb-20 fade-in">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-6">
+            ⭐ Client Testimonials
+          </div>
+          <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-8 leading-tight">
+            OUR CLIENTS
+            <span className="text-primary font-serif italic"> SAY</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Hear from satisfied clients who have transformed their digital presence with Snipmorph.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium">
+            Hear from satisfied clients who have transformed their digital presence and achieved remarkable business results with Snipmorph's innovative solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="testimonial-card rounded-2xl p-8 fade-in"
+              className="testimonial-card rounded-2xl p-8 fade-in hover:shadow-lg transition-all duration-300"
               data-testid={`testimonial-card-${index}`}
             >
-              <div className="flex text-accent text-xl mb-6">
+              <div className="flex text-yellow-400 text-lg mb-6">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-current" />
                 ))}
               </div>
-              <p className="text-foreground mb-6 leading-relaxed">
+              <blockquote className="text-foreground mb-8 leading-relaxed text-lg font-medium">
                 "{testimonial.content}"
-              </p>
+              </blockquote>
               <div className="flex items-center">
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name}
-                  className="w-14 h-14 rounded-full mr-4 object-cover"
+                  className="w-16 h-16 rounded-full mr-4 object-cover border-2 border-gray-200"
                 />
                 <div>
-                  <div className="font-semibold text-foreground">{testimonial.name}</div>
-                  <div className="text-muted-foreground">{testimonial.role}</div>
+                  <div className="font-bold text-foreground text-lg">{testimonial.name}</div>
+                  <div className="text-muted-foreground font-medium">{testimonial.role}</div>
                 </div>
               </div>
             </div>

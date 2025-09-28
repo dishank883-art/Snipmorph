@@ -44,22 +44,26 @@ export default function Portfolio() {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-secondary">
+    <section id="portfolio" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Our <span className="text-primary">Portfolio</span>
+        <div className="text-center mb-20 fade-in">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-6">
+            💼 Our Work
+          </div>
+          <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-8 leading-tight">
+            CASE
+            <span className="text-primary font-serif italic"> STUDIES</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore our latest projects showcasing diverse industries and cutting-edge design solutions.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium">
+            Explore our latest projects showcasing diverse industries and cutting-edge design solutions that drive real business results for our clients worldwide.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {projects.map((project) => (
             <div 
               key={project.id}
-              className="portfolio-card bg-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 fade-in cursor-pointer"
+              className="portfolio-card group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-primary/20 transition-all duration-300 fade-in cursor-pointer"
               onClick={() => {
                 if (project.externalUrl) {
                   window.open(project.externalUrl, '_blank', 'noopener,noreferrer');
@@ -71,38 +75,44 @@ export default function Portfolio() {
               }}
               data-testid={`portfolio-card-${project.id}`}
             >
-              <div className="relative">
+              <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={`${project.title} preview`} 
-                  className="w-full h-48 object-cover"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">{project.title}</h3>
-                  <p className="text-sm opacity-90">{project.subtitle}</p>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="p-6">
-                <p className="text-muted-foreground mb-4">
-                  {project.description}
-                </p>
+              <div className="p-8">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, index) => (
                     <span 
                       key={index}
-                      className="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm"
+                      className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <button className="text-primary hover:text-accent transition-colors duration-300 font-medium">
-                  View Project <ArrowRight className="inline-block ml-2 w-4 h-4" />
+                <h3 className="text-2xl font-bold text-foreground mb-2 font-serif group-hover:text-primary transition-colors duration-300">{project.title}</h3>
+                <p className="text-lg text-muted-foreground mb-4 font-medium">
+                  {project.subtitle}
+                </p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {project.description}
+                </p>
+                <button className="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 font-semibold">
+                  View Case Study <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center fade-in">
+          <button className="cta-button text-white px-10 py-4 rounded-xl font-bold text-lg">
+            VIEW ALL CASE STUDIES
+          </button>
         </div>
       </div>
 
