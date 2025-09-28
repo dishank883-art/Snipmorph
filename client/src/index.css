@@ -1,45 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: hsl(222, 84%, 4.9%);
-  --foreground: hsl(210, 40%, 98%);
-  --card: hsl(222, 84%, 4.9%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --popover: hsl(222, 84%, 4.9%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --primary: hsl(217, 91%, 60%);
-  --primary-foreground: hsl(222, 84%, 4.9%);
-  --secondary: hsl(217, 32%, 17%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --muted: hsl(215, 27%, 32%);
-  --muted-foreground: hsl(217, 10%, 64%);
-  --accent: hsl(38, 92%, 50%);
-  --accent-foreground: hsl(222, 84%, 4.9%);
-  --destructive: hsl(356.3033, 90.5579%, 54.3137%);
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 84%, 4.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 84%, 4.9%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(222, 84%, 4.9%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --accent: hsl(217, 91%, 60%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(217, 32%, 17%);
-  --input: hsl(217, 32%, 17%);
-  --ring: hsl(224, 71%, 4%);
-  --chart-1: hsl(217, 91%, 60%);
-  --chart-2: hsl(159.7826, 100%, 36.0784%);
-  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
-  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
-  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
-  --sidebar: hsl(222, 84%, 4.9%);
-  --sidebar-foreground: hsl(210, 40%, 98%);
-  --sidebar-primary: hsl(217, 91%, 60%);
-  --sidebar-primary-foreground: hsl(222, 84%, 4.9%);
-  --sidebar-accent: hsl(217, 32%, 17%);
-  --sidebar-accent-foreground: hsl(210, 40%, 98%);
-  --sidebar-border: hsl(217, 32%, 17%);
-  --sidebar-ring: hsl(224, 71%, 4%);
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', serif;
-  --font-mono: Menlo, monospace;
-  --radius: 0.75rem;
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --ring: hsl(221, 83%, 53%);
+  --chart-1: hsl(221, 83%, 53%);
+  --chart-2: hsl(142, 71%, 45%);
+  --chart-3: hsl(42, 92%, 56%);
+  --chart-4: hsl(280, 65%, 60%);
+  --chart-5: hsl(15, 85%, 55%);
+  --sidebar: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(222, 84%, 4.9%);
+  --sidebar-primary: hsl(221, 83%, 53%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(210, 40%, 98%);
+  --sidebar-accent-foreground: hsl(222, 84%, 4.9%);
+  --sidebar-border: hsl(214, 32%, 91%);
+  --sidebar-ring: hsl(221, 83%, 53%);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Manrope', sans-serif;
+  --font-mono: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+  --radius: 0.5rem;
 }
 
 .dark {
@@ -49,32 +49,32 @@
   --card-foreground: hsl(210, 40%, 98%);
   --popover: hsl(222, 84%, 4.9%);
   --popover-foreground: hsl(210, 40%, 98%);
-  --primary: hsl(217, 91%, 60%);
-  --primary-foreground: hsl(222, 84%, 4.9%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(217, 32%, 17%);
   --secondary-foreground: hsl(210, 40%, 98%);
   --muted: hsl(215, 27%, 32%);
   --muted-foreground: hsl(217, 10%, 64%);
-  --accent: hsl(38, 92%, 50%);
-  --accent-foreground: hsl(222, 84%, 4.9%);
-  --destructive: hsl(356.3033, 90.5579%, 54.3137%);
+  --accent: hsl(217, 91%, 60%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
   --border: hsl(217, 32%, 17%);
   --input: hsl(217, 32%, 17%);
-  --ring: hsl(224, 71%, 4%);
-  --chart-1: hsl(217, 91%, 60%);
-  --chart-2: hsl(159.7826, 100%, 36.0784%);
-  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
-  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
-  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --ring: hsl(221, 83%, 53%);
+  --chart-1: hsl(221, 83%, 53%);
+  --chart-2: hsl(142, 71%, 45%);
+  --chart-3: hsl(42, 92%, 56%);
+  --chart-4: hsl(280, 65%, 60%);
+  --chart-5: hsl(15, 85%, 55%);
   --sidebar: hsl(222, 84%, 4.9%);
   --sidebar-foreground: hsl(210, 40%, 98%);
-  --sidebar-primary: hsl(217, 91%, 60%);
-  --sidebar-primary-foreground: hsl(222, 84%, 4.9%);
+  --sidebar-primary: hsl(221, 83%, 53%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
   --sidebar-accent: hsl(217, 32%, 17%);
   --sidebar-accent-foreground: hsl(210, 40%, 98%);
   --sidebar-border: hsl(217, 32%, 17%);
-  --sidebar-ring: hsl(224, 71%, 4%);
+  --sidebar-ring: hsl(221, 83%, 53%);
 }
 
 @layer base {
@@ -100,11 +100,11 @@
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, #0F172A 0%, #1E293B 30%, #374151 60%, #4F46E5 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 50%, #EFF6FF 100%);
   position: relative;
   overflow: hidden;
 }
@@ -116,9 +116,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3), transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15), transparent 50%),
-              radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1), transparent 50%);
+  background: radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05), transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.08), transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.03), transparent 50%);
   animation: aurora 20s ease-in-out infinite;
 }
 
@@ -130,9 +130,10 @@
 
 .cta-button {
   background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .cta-button::before {
@@ -142,8 +143,8 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  transition: left 0.6s;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
 }
 
 .cta-button:hover::before {
@@ -152,14 +153,17 @@
 
 .cta-button:hover {
   background: linear-gradient(135deg, #1D4ED8 0%, #1E40AF 100%);
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4), 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .service-card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .service-card::before {
@@ -169,14 +173,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(29, 78, 216, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.02) 0%, rgba(29, 78, 216, 0.04) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-8px) rotate(1deg);
-  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-color: rgba(59, 130, 246, 0.2);
 }
 
 .service-card:hover::before {
@@ -211,7 +216,9 @@
 }
 
 .testimonial-card {
-  background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 nav.scrolled {
