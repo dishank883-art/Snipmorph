@@ -61,7 +61,7 @@ export default function Hero() {
            {/* Client Trust Indicators (Text Only) */}
 <div className="mt-20 fade-in">
   <p className="text-sm text-muted-foreground mb-8 font-medium uppercase tracking-wider">
-    TRUSTED BY 500+ BUSINESSES WORLDWIDE
+    TRUSTED BY BUSINESSES WORLDWIDE
   </p>
 </div>
  </div>            
