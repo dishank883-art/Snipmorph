@@ -64,7 +64,7 @@ export default function Contact() {
     {
       icon: <Mail className="text-xl" />,
       title: "Email Us",
-      subtitle: "snipmorph@gmail.com"
+      subtitle: "hello@snipmorph.com"
     },
     {
       icon: <Phone className="text-xl" />,
