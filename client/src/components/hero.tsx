@@ -58,11 +58,15 @@ export default function Hero() {
           </div>
           
           {/* Client Trust Indicators */}
-           <div className="mt-20 fade-in">
+           {/* Client Trust Indicators (Text Only) */}
+<div className="mt-20 fade-in">
   <p className="text-sm text-muted-foreground mb-8 font-medium uppercase tracking-wider">
-    TRUSTED BY BUSINESSES WORLDWIDE
+    TRUSTED BY 500+ BUSINESSES WORLDWIDE
   </p>
 </div>
+ </div>            
+</div>
+    </div>
     </section>
   );
 }
