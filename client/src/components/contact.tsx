@@ -120,7 +120,6 @@ export default function Contact() {
       Loading…
     </iframe>
   </div>
-</div>
           </div>
         </div>
       </div>
