@@ -95,12 +95,6 @@ export default function Contact() {
             WE'RE YOUR PARTNERS IN
             <span className="text-primary font-serif italic"> SUCCESS.</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium mb-12">
-            Ready to transform your digital presence? Let's discuss your project and create something amazing together that drives real business results.
-          </p>
-          <button className="cta-button text-white px-12 py-5 rounded-xl font-bold text-xl mb-16">
-            GET A FREE 30 MIN STRATEGY SESSION
-          </button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
