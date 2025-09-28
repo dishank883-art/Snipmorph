@@ -59,28 +59,10 @@ export default function Hero() {
           
           {/* Client Trust Indicators */}
            <div className="mt-20 fade-in">
-            <p className="text-sm text-muted-foreground mb-8 font-medium uppercase tracking-wider">TRUSTED BY 500+ BUSINESSES WORLDWIDE</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
-             <div className="bg-gray-100 h-12 rounded-lg flex items-center justify-center">
-  <img 
-    src={client1Logo} 
-    alt="Client 1 Logo" 
-    className="h-8 object-contain"
-  />
+  <p className="text-sm text-muted-foreground mb-8 font-medium uppercase tracking-wider">
+    TRUSTED BY BUSINESSES WORLDWIDE
+  </p>
 </div>
-              <div className="bg-gray-100 h-12 rounded-lg flex items-center justify-center text-gray-400 font-semibold text-sm">
-                CLIENT LOGO
-              </div>
-              <div className="bg-gray-100 h-12 rounded-lg flex items-center justify-center text-gray-400 font-semibold text-sm">
-                CLIENT LOGO
-              </div>
-              <div className="bg-gray-100 h-12 rounded-lg flex items-center justify-center text-gray-400 font-semibold text-sm">
-                CLIENT LOGO
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
