@@ -49,14 +49,19 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Our <span className="text-primary">Services</span>
+        <div className="text-center mb-20 fade-in">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-6">
+            ⭐ How We Help
+          </div>
+          <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-8 leading-tight">
+            DISCOVER OUR
+            <br />
+            <span className="text-primary font-serif italic">SERVICES</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We deliver highly customized digital solutions that elevate your brand and drive business growth across global markets.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium">
+            We harness the power of digital technologies to grow businesses online. Snipmorph provides high-quality and innovative solutions to stay at the forefront of this dynamic environment. We focus on data-driven and behavioral insights to deliver a customer journey that delights and returns a positive ROI for our clients – no matter how big or small.
           </p>
         </div>
 
@@ -64,24 +69,30 @@ export default function Services() {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="service-card bg-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 fade-in"
+              className="service-card group bg-white rounded-xl p-8 transition-all duration-300 fade-in border hover:border-primary/20"
               data-testid={`service-card-${index}`}
             >
-              <div className="text-primary mb-6">
+              <div className="bg-blue-50 w-16 h-16 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-bold text-card-foreground mb-4">{service.title}</h3>
-              <p className="text-muted-foreground mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-4 font-serif">{service.title}</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
                 {service.description}
               </p>
-              <ul className="text-muted-foreground space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center">
-                    <Check className="text-primary mr-2 w-4 h-4" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <div className="space-y-3">
+                <p className="text-sm font-semibold text-foreground uppercase tracking-wider">START WITH</p>
+                <ul className="text-muted-foreground space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <Check className="text-primary mr-3 w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <span className="font-medium">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button className="mt-4 text-primary font-semibold hover:text-primary/80 transition-colors text-sm">
+                  Get Started →
+                </button>
+              </div>
             </div>
           ))}
         </div>
