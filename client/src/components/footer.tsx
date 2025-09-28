@@ -11,8 +11,7 @@ export default function Footer() {
   const company = [
     "About Us",
     "Portfolio",
-    "Careers",
-    "Blog"
+    "Careers"
   ];
 
   const scrollToSection = (sectionId: string) => {
