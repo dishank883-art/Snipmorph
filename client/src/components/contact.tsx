@@ -108,114 +108,19 @@ export default function Contact() {
           </div>
 
           <div className="fade-in">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="firstName" className="text-foreground font-medium mb-2 block">
-                    First Name
-                  </Label>
-                  <Input
-                    id="firstName"
-                    type="text"
-                    value={formData.firstName}
-                    onChange={(e) => handleInputChange('firstName', e.target.value)}
-                    placeholder="John"
-                    required
-                    data-testid="input-first-name"
-                    className="bg-input border-border text-foreground"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="lastName" className="text-foreground font-medium mb-2 block">
-                    Last Name
-                  </Label>
-                  <Input
-                    id="lastName"
-                    type="text"
-                    value={formData.lastName}
-                    onChange={(e) => handleInputChange('lastName', e.target.value)}
-                    placeholder="Doe"
-                    required
-                    data-testid="input-last-name"
-                    className="bg-input border-border text-foreground"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <Label htmlFor="email" className="text-foreground font-medium mb-2 block">
-                  Email
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange('email', e.target.value)}
-                  placeholder="john@company.com"
-                  required
-                  data-testid="input-email"
-                  className="bg-input border-border text-foreground"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="company" className="text-foreground font-medium mb-2 block">
-                  Company
-                </Label>
-                <Input
-                  id="company"
-                  type="text"
-                  value={formData.company}
-                  onChange={(e) => handleInputChange('company', e.target.value)}
-                  placeholder="Your Company"
-                  data-testid="input-company"
-                  className="bg-input border-border text-foreground"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="projectType" className="text-foreground font-medium mb-2 block">
-                  Project Type
-                </Label>
-                <Select onValueChange={(value) => handleInputChange('projectType', value)}>
-                  <SelectTrigger className="bg-input border-border text-foreground" data-testid="select-project-type">
-                    <SelectValue placeholder="Select project type" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="custom-website">Custom Website</SelectItem>
-                    <SelectItem value="ecommerce">E-commerce Store</SelectItem>
-                    <SelectItem value="saas">SaaS Landing Page</SelectItem>
-                    <SelectItem value="mobile-app">Mobile App</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              
-              <div>
-                <Label htmlFor="message" className="text-foreground font-medium mb-2 block">
-                  Message
-                </Label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => handleInputChange('message', e.target.value)}
-                  placeholder="Tell us about your project..."
-                  rows={4}
-                  required
-                  data-testid="textarea-message"
-                  className="bg-input border-border text-foreground resize-none"
-                />
-              </div>
-              
-              <Button 
-                type="submit" 
-                className="w-full cta-button text-white py-4 rounded-lg font-semibold text-lg"
-                data-testid="button-submit-contact"
-              >
-                <Send className="inline-block mr-2 w-4 h-4" />
-                Send Message
-              </Button>
-            </form>
+  <div className="w-full h-[800px]">
+    <iframe
+      src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+      width="100%"
+      height="100%"
+      frameBorder="0"
+      marginHeight={0}
+      marginWidth={0}
+    >
+      Loading…
+    </iframe>
+  </div>
+</div>
           </div>
         </div>
       </div>
