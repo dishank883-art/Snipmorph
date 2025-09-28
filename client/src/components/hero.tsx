@@ -61,8 +61,7 @@ export default function Hero() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
               <div className="bg-gray-100 h-12 rounded-lg flex items-center justify-center text-gray-400 font-semibold text-sm">
                <img 
-        src="file:///C:/Users/DISHANK/Downloads/ChatGPT%20Image%20Jun%2022,%202025,%2003_15_10%20PM%20(2).png" 
-        className="h-8 object-contain" 
+        src="file:///C:/Users/DISHANK/Downloads/ChatGPT%20Image%20Jun%2022,%202025,%2003_15_10%20PM%20(2).png"  
       />
               </div>
               <div className="bg-gray-100 h-12 rounded-lg flex items-center justify-center text-gray-400 font-semibold text-sm">
