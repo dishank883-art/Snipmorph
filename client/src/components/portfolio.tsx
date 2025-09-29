@@ -27,6 +27,16 @@ export default function Portfolio() {
       externalUrl: "https://roaminsider.com"
     },
     {
+      {
+  id: "getlifted",
+  title: "GetLifted",
+  subtitle: "E-commerce Landing Page",
+  description: "Clean and modern e-commerce shopify store for a lifestyle brand with focus on product showcase and conversion.",
+  image: "https://cdn.pixabay.com/photo/2016/03/27/23/00/weight-lifting-1284616_1280.jpg", 
+  tags: ["E-commerce", "Shopify", "Lifestyle"],
+      externalUrl: "https://getlifted.in/"
+},
+    {
       id: "urbanwear",
       title: "UrbanWear Co.",
       subtitle: "E-commerce Store",
@@ -35,20 +45,13 @@ export default function Portfolio() {
       tags: ["E-commerce", "Luxury", "Shopping Cart"]
     },
     {
+      
       id: "brightpath",
       title: "BrightPath Consulting",
       subtitle: "Business Website",
       description: "Professional corporate website with clean design, showcasing consulting services and expertise.",
       image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       tags: ["Corporate", "Multi-page", "Professional"]
-    },
-    {
-      id: "taskly",
-      title: "Taskly AI",
-      subtitle: "SaaS Landing Page",
-      description: "Modern SaaS landing page with conversion-focused design and clear value proposition.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      tags: ["SaaS", "AI", "Landing Page"]
     }
   ];
 
