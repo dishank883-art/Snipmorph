@@ -27,7 +27,6 @@ export default function Portfolio() {
       externalUrl: "https://roaminsider.com"
     },
     {
-      {
   id: "getlifted",
   title: "GetLifted",
   subtitle: "E-commerce Landing Page",
